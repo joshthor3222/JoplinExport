@@ -8,10 +8,9 @@ Once your path is set, all you have to do is click a single button in your toolb
 ## Installation
 
 1. Download the latest release
-2. Unzip the file
-3. In Joplin go to Settings > Plugins > Install plugin from file
-4. Upload the com.joshthor.export.jpl file
-5. Restart Joplin
+2. In Joplin go to Settings > Plugins > Install plugin from file
+3. Upload the com.joshthor.export.jpl file
+4. Restart Joplin
 
 ## Usage
 
