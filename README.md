@@ -18,3 +18,9 @@ The goal of this plugin is to allow for an easy way to share specific notes with
 3. Navigate to the note you want to export
 4. Click the "Export as MD" button in the toolbar
 5. The note will be saved as a .md file in the folder you specified
+
+## Updates
+
+### 1.0.1
+- Added a "Show confirmation dialog" option to the settings. Off by default. Enabling makes a popup on save to give the user feedback. Can be disabled cause its annoying.
+- Added a popup when the save icon is clicked if the path is not set to prevent user confusion.
