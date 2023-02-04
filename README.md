@@ -23,6 +23,9 @@ After your export path is set, simply click that to save your file. Optional con
 
 ## Updates
 
+### 1.0.2
+- Added a "Swap spaces for dashes" option to the settings. Off by default. Enabling will replace spaces in the file name with dashes. This is useful if you want to use the file name in a URL or do a lot of terminal work.
+- Swapped slashes for dashes in the file name to prevent unnecessary folder creation.
 ### 1.0.1
 - Added a "Show confirmation dialog" option to the settings. Off by default. Enabling makes a popup on save to give the user feedback. Can be disabled cause its annoying.
 - Added a popup when the save icon is clicked if the path is not set to prevent user confusion.

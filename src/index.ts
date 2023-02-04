@@ -14,7 +14,7 @@ joplin.plugins.register({
 		const handle = await dialogs.create('exportpath');
 		await dialogs.setHtml(handle,
 		'<p style="text-align: center">' +
-				'Set your output folder in Settings -> File Export Settings to export your file.' +
+				'Set your output folder in Settings/Options -> File Export Settings to export your file.' +
 			'</p>'
 		);
 		await dialogs.setButtons(handle, [
@@ -44,7 +44,19 @@ joplin.plugins.register({
 					}
 					const content = note.body;
 
-					const fullPath = `${fileExportPath}/${note.title}.md`;
+					//make / read as a character in note.title
+					let title = note.title.replace(/\//g, '-');
+
+					//if swapSpacesForDashes is true, swap spaces for dashes in title
+					await joplin.settings.value('swapSpacesForDashes').then((value) => {
+						if (value) {
+							title = title.replace(/\s/g, '-');
+						}
+					});
+
+
+
+					const fullPath = `${fileExportPath}/${title}.md`;
 
 					await fs.outputFile(fullPath, content).then(() => {
 						console.info('File exported');
@@ -107,7 +119,17 @@ joplin.plugins.register({
 				section: 'fileExportSettings',
 				public: true,
 				label: 'Show export confirmation popup',
+			},
+			//add a checkbox setting labeled 'swap spaces for dashes in filename"
+			'swapSpacesForDashes': {
+				value: false,
+				type: SettingItemType.Bool,
+				section: 'fileExportSettings',
+				public: true,
+				label: 'Swap spaces for dashes in filename',
 			}
+
+
 		});
 
 
