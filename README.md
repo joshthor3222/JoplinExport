@@ -2,6 +2,8 @@
 
 This is a simple plugin that allows for quick and easy export of the current note as a .md file in the folder of your choosing.
 The goal of this plugin is to allow for an easy way to share specific notes with friends or colleagues without having to export and navigate your entire Joplin database.
+This plugin adds a small file export button to the toolbar in the editing window. 
+After your export path is set, simply click that to save your file. Optional confirmation window can be enabled in the settings to provide visual confirmation that your file is saved, if you prefer.
 
 ## Installation
 
